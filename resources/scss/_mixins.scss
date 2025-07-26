@@ -1,0 +1,42 @@
+// DISPLAY //
+
+@mixin align-justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+// BTN //
+@mixin cta-btn-construct {
+    padding: 10px;
+    color: $pastel-white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+// CARD //
+
+@mixin card-construct {
+    border-radius: 20px;
+    width: 700px;
+    height: 250px;
+    text-align: center;
+    background-color: $pastel-white;
+}
+
+// TEXT //
+
+@mixin text-align {
+    text-align: center;
+}
