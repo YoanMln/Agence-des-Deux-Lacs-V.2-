@@ -1,0 +1,218 @@
+@import "variables.scss";
+@import "mixins.scss";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $pastel-white;
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.separator-section {
+    @include align-justify-center;
+    margin: 20px 0;
+}
+
+.separator-section span {
+    border: 0.1px solid;
+    border-color: $pastel-grey;
+    margin: 20px 5px;
+}
+
+// VP-HEADER //
+
+.vp-container {
+    @include column;
+    min-height: 100vh;
+
+    .vp {
+        @include align-justify-center;
+        background: url(/public/images/frame.jpg) center center/cover;
+        height: 25rem;
+    }
+    .vp-logo {
+        @include align-justify-center;
+    }
+    .vp-color-a {
+        color: $pastel-white;
+    }
+    .name {
+        color: $pastel-white;
+        font-weight: lighter;
+        font-size: 35px;
+    }
+    .menu {
+        @include justify-center;
+        background: rgba(14, 133, 202, 0.479);
+        border-radius: 1.2rem;
+        padding: 1rem 2rem;
+    }
+    .menu ul {
+        display: flex;
+    }
+    .menu ul li {
+        padding: 0 2rem;
+    }
+    .menu ul li a {
+        color: $pastel-white;
+        font-size: $font-size-20;
+
+        &:hover {
+            color: $light-Blue;
+            transition: 0.45s;
+        }
+    }
+    .logo-img {
+        max-width: 5rem;
+        border-radius: 25px;
+        padding: 1rem;
+    }
+}
+
+// INFO //
+
+.container-info {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 10rem;
+    margin-top: $margin-top-2rem;
+
+    .img-find,
+    .img-estimate,
+    .img-rental {
+        @include justify-center;
+    }
+    .logo-find,
+    .logo-estimate,
+    .logo-rental {
+        width: 20%;
+    }
+    .text-title {
+        @include text-align;
+        text-transform: uppercase;
+        margin-top: $margin-top-20px;
+    }
+    .text-offer {
+        @include text-align;
+        margin-top: 30px;
+    }
+    .offer-container-btn {
+        @include justify-center;
+        gap: 4px;
+        .buy-btn,
+        .rent-btn {
+            @include cta-btn-construct;
+            border-color: $light-Blue;
+            background-color: $light-Blue;
+
+            &:hover {
+                background-color: $blue;
+                border: $border;
+                border-color: $blue;
+            }
+        }
+    }
+
+    .more-info-container-btn {
+        @include justify-center;
+        margin-top: $margin-top-2rem;
+        .more-info {
+            @include cta-btn-construct;
+            background-color: $blue;
+            &:hover {
+                background-color: $light-Blue;
+                border: $border;
+                border-color: $light-Blue;
+            }
+        }
+    }
+
+    .estimate-container-btn {
+        @include justify-center;
+        margin-top: $margin-top-2rem;
+
+        .estimate-btn {
+            @include cta-btn-construct;
+            background-color: $yellow;
+            &:hover {
+                background-color: #ee9754;
+            }
+        }
+    }
+}
+
+// OFFER //
+
+.offer {
+    padding: 5rem 2rem 5rem 2rem;
+
+    .title-last-offers {
+        @include justify-center;
+        font-weight: 300;
+        font-size: 2rem;
+        color: $dark;
+        transition: 0.2s;
+        &:hover {
+            color: $light-Blue;
+        }
+    }
+    .offer-list {
+        display: flex;
+        flex-flow: nowrap;
+        justify-content: space-between;
+    }
+    .offer-elem {
+        border: $border;
+        border-color: $pastel-white;
+        margin: 1rem;
+        flex: 1;
+    }
+    .offer-elem-text {
+        padding: 2rem;
+        @include text-align;
+    }
+    .offer-elem-img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .offer-separator {
+        margin: 1rem;
+        height: 1px;
+        width: 1px;
+        background-color: $pastel-Black;
+    }
+}
+
+// ESTIMATE //
+
+.estimate-title {
+    @include justify-center;
+    font-weight: 300;
+    font-size: 2rem;
+    color: $dark;
+    transition: 0.2s;
+    &:hover {
+        color: $light-Blue;
+    }
+    .estimate-container {
+        padding: 0 2rem 10rem 2rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .online {
+        @include card-construct;
+    }
+    .agency {
+        @include card-construct;
+    }
+}
