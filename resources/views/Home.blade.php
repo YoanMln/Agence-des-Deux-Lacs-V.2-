@@ -8,10 +8,7 @@
         name="description"
         content="Agence immobilière en Savoie et Haute-Savoie : annonces, estimations et gestion locative." />
     <title>Agence des deux Lacs</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/fonts.css" />
-    <link rel="stylesheet" href="CSS/responsive.css" />
-    <link rel="stylesheet" href="typography.css" />
+    @vite(['resources/sass/app.scss'])
     <script
         src="https://kit.fontawesome.com/97bb762bba.js"
         crossorigin="anonymous"></script>
@@ -24,7 +21,7 @@
                 <a href="#home" class="vp-logo">
                     <img
                         class="logo-img"
-                        src="public/images/logo.png"
+                        src="{{asset('images/logo.png')}}"
                         alt="logo du site Agence des Deux Lacs" />
 
                     <h1 class="name">Agence des Deux Lacs</h1>

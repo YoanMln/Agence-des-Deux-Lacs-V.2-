@@ -1,14 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
 @import "variables.scss";
 @import "mixins.scss";
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     background-color: $pastel-white;
     list-style: none;
+    font-family: "Tenor Sans";
 }
 
 ul {
@@ -203,16 +207,315 @@ ul {
     &:hover {
         color: $light-Blue;
     }
-    .estimate-container {
-        padding: 0 2rem 10rem 2rem;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
+}
+.estimate-container {
+    padding: 0 2rem 10rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.online {
+    @include card-construct;
+}
+.agency {
+    @include card-construct;
+}
+.content-estimate {
+    margin-top: 30px;
+    margin-left: 10px;
+    color: $pastel-white;
+    width: 100px;
+    @include text-align;
+    border-radius: $radius5;
+    background-color: $blue;
+}
+.estimate-offer {
+    padding-top: 30px;
+}
+
+.estimate-agency {
+    border-radius: $radius10;
+    padding: 6px;
+    color: $pastel-white;
+    background-color: $blue;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.25s;
+    &:hover {
+        background-color: $light-Blue;
     }
-    .online {
-        @include card-construct;
+
+    .estimate-online {
+        border-radius: $radius10;
+        padding: 6px;
+        margin-top: 45px;
+        color: $pastel-white;
+        background-color: $blue;
+        display: inline-block;
+        transition: 0.2s;
+        &:hover {
+            background-color: $light-Blue;
+        }
     }
-    .agency {
-        @include card-construct;
+}
+
+// NEWS //
+
+.container-news {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5rem 1rem 5rem 1rem;
+}
+.container-news > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.news-title {
+    @include justify-center;
+    margin-top: 3rem;
+    font-weight: 300;
+    font-size: 2rem;
+    color: $dark;
+    transition: 0.2s;
+    &:hover {
+        color: $light-Blue;
     }
+}
+.news-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-news-1 {
+    @include justify-center;
+}
+
+.title-news {
+    @include text-align;
+    margin-top: $margin-top-2rem;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.date-news {
+    @include text-align;
+    font-weight: lighter;
+    font-size: small;
+}
+.news-content {
+    @include text-align;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.read-more-container {
+    @include justify-center;
+}
+
+.carrousel-container-btn {
+    @include justify-center;
+}
+
+.read-more-btn {
+    @include cta-btn-construct;
+    background-color: #47b8d6;
+    border: 1px solid #47b8d6;
+    &:hover {
+        background-color: $blue;
+        border: $border;
+        border-color: $blue;
+    }
+}
+
+// CARROUSEL //
+
+.selection-title {
+    @include justify-center;
+    margin-top: 3rem;
+    font-weight: 300;
+    font-size: 2rem;
+    color: $dark;
+    transition: 0.2s;
+}
+
+.selection-title:hover {
+    color: $light-Blue;
+}
+
+.carrousel-items {
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.carrousel-item {
+    margin-left: 1rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 450px;
+    scroll-snap-align: start;
+}
+
+.carrousel-img {
+    max-width: 30rem;
+}
+
+.card-title {
+    @include justify-center;
+}
+
+.card-info {
+    @include justify-center;
+}
+
+.card-price {
+    @include justify-center;
+}
+
+.card-more-info {
+    padding: 8px 15px 8px 15px;
+    background-color: #47b8d6;
+    border: 1px solid #47b8d6;
+    border-radius: $radius5;
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $pastel-white;
+}
+
+.card-more-info:hover {
+    background: #1e81b0;
+    border: 1px solid #1e81b0;
+}
+
+// CONTACT //
+
+.contact {
+    @include column;
+    @include text-align;
+    background: $dark;
+    color: $pastel-white;
+}
+
+.contact-form {
+    @include column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.title {
+    @include justify-center;
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.contact-form input {
+    background: $dark;
+    border: 0;
+    border-bottom: 1px solid #555;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: $pastel-white;
+    outline: 0;
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 30px;
+    background: white;
+    font-family: var(--open-sans, sans-serif);
+    text-transform: uppercase;
+    color: $dark;
+    font-weight: 800;
+    font-size: 1.3;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: $light-Blue;
+}
+
+// FOOTER //
+
+footer {
+    @include text-align;
+    background: $pastel-Black;
+    padding: 1rem 1rem 1rem 1rem;
+    color: $pastel-white;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+/* Mobile first (styles de base) */
+
+/* Petits écrans (téléphones) */
+@media (max-width: 480px) {
+  .name {
+    font-size: 20px;
+    color: white;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .offer-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-news {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .estimate-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+
+/* Tablettes en portrait */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Styles pour les tablettes */
+}
+
+/* Tablettes en paysage et petits laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-news {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .estimate-container {
+    gap: 20px;
+  }
+}
+
+/* Ordinateurs et écrans larges */
+@media (min-width: 1025px) {
+  .estimate-container {
+    gap: 20px;
+  }
 }
