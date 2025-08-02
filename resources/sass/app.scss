@@ -457,65 +457,94 @@ footer p {
     margin-bottom: 0;
 }
 
+// BACKOFFICE //
+
+.container-choice-backoffice {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dashboard,
+.news,
+.selection {
+    @include card-backoffice-construct;
+    margin-top: 2rem;
+}
+
+.return-btn {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    gap: 2rem;
+
+    .back-btn {
+        @include back-btn-construct;
+    }
+}
+
+.container-background {
+    background: url(/public/images/frame.jpg) center center/cover;
+    height: 25rem;
+}
 
 /* Mobile first (styles de base) */
 
 /* Petits écrans (téléphones) */
 @media (max-width: 480px) {
-  .name {
-    font-size: 20px;
-    color: white;
-  }
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+    .name {
+        font-size: 20px;
+        color: white;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
 
-  .container-info {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
+    .container-info {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
 
-  .offer-list {
-    display: flex;
-    flex-direction: column;
-  }
+    .offer-list {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .container-news {
-    display: flex;
-    flex-direction: column;
-  }
+    .container-news {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .estimate-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-  }
+    .estimate-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
 }
 
 /* Tablettes en portrait */
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Styles pour les tablettes */
+    /* Styles pour les tablettes */
 }
 
 /* Tablettes en paysage et petits laptops */
 @media (min-width: 769px) and (max-width: 1024px) {
-  .container-news {
-    display: flex;
-    flex-direction: column;
-  }
+    .container-news {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .estimate-container {
-    gap: 20px;
-  }
+    .estimate-container {
+        gap: 20px;
+    }
 }
 
 /* Ordinateurs et écrans larges */
 @media (min-width: 1025px) {
-  .estimate-container {
-    gap: 20px;
-  }
+    .estimate-container {
+        gap: 20px;
+    }
 }

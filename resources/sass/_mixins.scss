@@ -45,3 +45,34 @@
 @mixin text-align {
     text-align: center;
 }
+
+// BACKOFFICE //
+
+@mixin card-backoffice-construct {
+    width: 250px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+    color: $dark;
+}
+
+@mixin back-btn-construct {
+    padding: 10px;
+    color: $pastel-Black;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: $border;
+    border-color: $light-Blue;
+    transition: 0.2s;
+    border-radius: 5px;
+    font-weight: lighter;
+    &:hover {
+        background-color: $light-Blue;
+        color: $pastel-white;
+    }
+}

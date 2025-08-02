@@ -106,42 +106,22 @@
                 </div>
                 <article>
                     <ul class="offer-list">
+                        @forelse($lastOffers as $offer)
                         <li class="offer-elem">
                             <img
-                                src="public/images/house-1.jpg"
+                                src="{{asset('images/' . $offer->image)}}"
                                 alt="photo d'un appartement à acheter à Aix-les-Bains"
                                 class="offer-elem-img" />
                             <div class="offer-elem-text">
-                                <p>Appartement - Aix-les-Bains 73100</p>
-                                <p>4 chambres 150m2</p>
+                                <p>{{$offer->type}} - {{$offer->location}}</p>
+                                <p>{{$offer->rooms}} chambre(s) {{$offer->surface}}m2</p>
                                 <div class="offer-separator"></div>
-                                <p>1 000 000 €</p>
+                                <p>{{number_format($offer->price, 0, ',' , ' ')}}</p>
                             </div>
                         </li>
-                        <li class="offer-elem">
-                            <img
-                                src="public/images/house-2.jpg"
-                                alt="photo d'un appartement à acheter à Veyrier-du-Lac"
-                                class="offer-elem-img" />
-                            <div class="offer-elem-text">
-                                <p>Appartement - Veyrier-du-Lac 74290</p>
-                                <p>5 chambres 233m2</p>
-                                <div class="offer-separator"></div>
-                                <p>3 900 000 €</p>
-                            </div>
-                        </li>
-                        <li class="offer-elem">
-                            <img
-                                src="public/images/house-3.jpg"
-                                alt="photo d'un appartement à acheter à Chambéry"
-                                class="offer-elem-img" />
-                            <div class="offer-elem-text">
-                                <p>Appartement - Chambéry 73000</p>
-                                <p>5 chambres 215m2</p>
-                                <div class="offer-separator"></div>
-                                <p>460 000 €</p>
-                            </div>
-                        </li>
+                        @empty
+                        <p>Aucune Offre Disponible</p>
+                        @endforelse
                     </ul>
                 </article>
             </div>
